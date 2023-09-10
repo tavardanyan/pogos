@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Sheet } from '@mui/joy';
 
-import ChatRoomsBox from '../ChatRoomsBox';
+import ChatRoomList from '../ChatRoomList';
 import MessagesBox from '../MessageBox';
 
 import styles from './styles';
@@ -29,6 +29,25 @@ const mockData: {
           sender: 'You'
         }
       ]
+    },
+    {
+      id: '2',
+      users: [{
+        name: 'Gurgen',
+        username: '@gugs',
+        avatar: '/client/images/1.jpg',
+        online: true,
+        typing: null,
+      }],
+      messages: [
+        {
+          id: '1',
+          content: 'lorem ipsum dolor sit amet, consectet',
+          timestamp: '165453465146',
+          sender: 'You',
+          unread: true
+        }
+      ]
     }
   ]
 }
@@ -39,7 +58,7 @@ export default function ChatBox() {
   return (
     <Sheet sx={styles.messageBox}>
       <Sheet sx={styles.roomsBox}>
-        <ChatRoomsBox
+        <ChatRoomList
           chats={mockData.chats}
           selectedChatId={selectedChat.id}
           setSelectedChat={setSelectedChat}
