@@ -27,6 +27,18 @@ const mockData: {
           content: 'lorem ipsum dolor sit amet, consectet',
           timestamp: '16545315465146',
           sender: 'You'
+        },
+        {
+          id: '2',
+          content: 'lorem ipsum dolor sit amet, consectet',
+          timestamp: '16545315465146',
+          sender: {
+            name: 'John',
+            username: '@jonni',
+            avatar: '/client/images/1.jpg',
+            online: true,
+            typing: null,
+          }
         }
       ]
     },
@@ -36,7 +48,7 @@ const mockData: {
         name: 'Gurgen',
         username: '@gugs',
         avatar: '/client/images/1.jpg',
-        online: true,
+        online: false,
         typing: null,
       }],
       messages: [

@@ -11,6 +11,7 @@ const styles = {
     },
   },
   roomsBox: {
+    border: '1px solid',
     position: {
       xs: 'fixed',
       sm: 'sticky',
